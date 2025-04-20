@@ -19,22 +19,25 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
       {/* Header */}
+      {/* Header */}
       <div className="h-[20vh] bg-blue-600 text-white flex flex-col justify-between shadow-md dark:bg-gray-800">
-        <div className="flex justify-between items-center px-8 pt-4">
-          <h3 className="text-4xl font-bold italic">Chandana Musunuru</h3>
-          <div className="flex gap-4 items-center">
+        <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 pt-4 gap-4">
+          <h6 className="text-3xl sm:text-4xl text-white font-bold italic font-serif text-center sm:text-left">
+            Chandana Musunuru
+          </h6>
+          <div className="flex flex-wrap justify-center gap-2 items-center">
             {sections.map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="bg-blue-600 px-4 py-2 rounded-md font-semibold hover:bg-green-500 hover:text-white transition"
+                className="bg-blue-600 px-3 sm:px-4 py-1.5 rounded-md text-sm sm:text-base font-semibold hover:bg-green-500 hover:text-white transition"
               >
                 {item}
               </a>
             ))}
             <button
               onClick={() => setIsDark(!isDark)}
-              className="ml-4 px-4 py-2 bg-white text-blue-600 dark:bg-gray-700 dark:text-yellow-300 rounded-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+              className="px-3 sm:px-4 py-1.5 bg-white text-blue-600 dark:bg-gray-700 dark:text-yellow-300 rounded-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition text-sm sm:text-base"
             >
               {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
             </button>
@@ -44,12 +47,15 @@ function App() {
           <a
             href="/resume.pdf"
             download
-            className="bg-white text-blue-600 px-6 py-2 rounded-full font-bold hover:bg-green-500 hover:text-white transition"
+            className="bg-white text-blue-600 px-5 sm:px-6 py-2 rounded-full font-bold hover:bg-green-500 hover:text-white transition text-sm sm:text-base"
           >
             Download Resume
           </a>
         </div>
       </div>
+
+
+
 
       {/* Sections */}
       <div>
@@ -116,7 +122,7 @@ function App() {
                     </div>
 
                     {/* Responsibilities */}
-                    <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg transition">
+                    <div className="bg-gray-100 dark:bg-off-white-800 p-8 rounded-lg shadow-lg transition">
                       <ul className="list-disc pl-6 space-y-3 text-lg text-gray-800 dark:text-gray-100">
                         {[
                           'Designed and built scalable RESTful APIs using Java and Spring Boot to support high-volume backend systems',
