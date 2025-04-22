@@ -7,8 +7,13 @@ import subjectImage from './assets/logo.gif';
 import rabbit from './assets/rabb.gif';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, useAnimation } from 'framer-motion';
-import { useRef} from 'react';
+import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+import mental from './assets/mental.jpg';
+import segmentation from './assets/customer.jpg';
+import lib from './assets/lib.png';
+
+
 
 const responsibilities = [
   'Designed and built scalable RESTful APIs using Java and Spring Boot to support high-volume backend systems',
@@ -18,6 +23,8 @@ const responsibilities = [
   'Implemented unit and integration tests with JUnit and Mockito, ensuring code quality and regression safety',
   'Used Git for version control, Jira for task tracking, and worked in CI/CD pipelines to streamline delivery',
 ];
+
+
 
 // Animation Variants
 const container = {
@@ -146,7 +153,7 @@ function App() {
               >
                 <div className="max-w-7xl mx-auto">
                   {/* Top Heading */}
-                  <h2 className="text-4xl font-bold mb-10 text-blue-600 dark:text-yellow-300">
+                  <h2 className="text-4xl font-bold mb-10 text-blue-600 dark:text-white">
                     Software Journey
                   </h2>
                   <h4 className="text-lg font-m mb-10 text-black-600 dark:text-yellow-300">
@@ -210,7 +217,7 @@ function App() {
               >
                 <div className="w-full max-w-7xl flex">
                   <div className="w-[30%] flex items-start justify-start pl-6">
-                    <h2 className="text-4xl font-bold text-blue-600 dark:text-yellow-300">
+                    <h2 className="text-4xl font-bold text-blue-600 dark:text-white">
                       Journey Through Academia
                     </h2>
                   </div>
@@ -286,21 +293,15 @@ function App() {
                 className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white px-6 py-16"
               >
                 <div className="max-w-7xl mx-auto">
-                  {/* Top Heading */}
-                  <h2 className="text-4xl font-bold mb-10 text-blue-600 dark:text-yellow-300">My Projects</h2>
-
-                  {/* Project Cards Row */}
+                  <h2 className="text-4xl font-bold mb-10 text-blue-600 dark:text-white">My Projects</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
                     {/* Project 1 */}
                     <div className="rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden border border-gray-300 dark:border-gray-700">
-                      {/* Top 15% – Title */}
                       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-center py-4 flex items-center justify-center">
-
                         <img src={rabbit} alt="rabbit Logo" className="w-20 h-20 object-contain mr-4" />
-                        {/* Title */}
                         <h3 className="text-lg font-semibold">Rapid Multiplication</h3>
                       </div>
-                      {/* Bottom 85% – Details */}
                       <div className="bg-white dark:bg-gray-800 p-4 space-y-2 h-[85%]">
                         <p className="text-sm text-gray-700 dark:text-gray-300">
                           A fun Android game built using <strong>Unity</strong> and <strong>C#</strong> to teach kids multiplication.
@@ -325,54 +326,114 @@ function App() {
 
                     {/* Project 2 */}
                     <div className="rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden border border-gray-300 dark:border-gray-700">
-                      {/* Top 15% – Title */}
-                      <div className="bg-gray-800 text-white text-center py-4">
-                        <h3 className="text-lg font-semibold">🧠 Mental Health Analysis</h3>
+                      <div className="bg-gradient-to-r from-blue-600 to-teal-500 text-white text-center py-4 flex items-center justify-center">
+                        <img src={mental} alt="Mental Health Logo" className="w-20 h-20 object-contain mr-4" />
+                        <h3 className="text-lg font-semibold">Mental Health Analysis</h3>
                       </div>
-                      {/* Bottom 85% – Details */}
                       <div className="bg-white dark:bg-gray-800 p-4 space-y-2 h-[85%]">
                         <p className="text-sm text-gray-700 dark:text-gray-300">
-                          A deep learning model analyzes social media text to detect mental health issues using <strong>NLP</strong>.
+                          A deep learning pipeline that uses social media text to detect signs of mental health conditions.
                         </p>
                         <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                          <li>💬 Sentiment classification</li>
-                          <li>🧪 Preprocessing with NLTK, spaCy</li>
-                          <li>🤖 LSTM-based model in TensorFlow</li>
-                          <li>📊 Dataset from Kaggle</li>
+                          <li>💬 Sentiment & emotion classification</li>
+                          <li>🧹 Preprocessing with regex, NLTK, spaCy</li>
+                          <li>🤖 Models: Logistic Regression on BERT, Fine-tuned BERT, BERT+LSTM</li>
+                          <li>📉 Class imbalance handling</li>
+                          <li>📊 Visualizations using Seaborn, Matplotlib</li>
                         </ul>
+                        <a
+                          href="https://github.com/chandana-musunuru/MachineLearning.git"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-teal-600 text-white px-4 py-2 rounded-md text-sm hover:bg-teal-700"
+                        >
+                          View on GitHub
+                        </a>
                       </div>
                     </div>
 
                     {/* Project 3 */}
                     <div className="rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden border border-gray-300 dark:border-gray-700">
-                      {/* Top 15% – Title */}
-                      <div className="bg-gray-800 text-white text-center py-4">
-                        <h3 className="text-lg font-semibold">🚧 More Coming Soon</h3>
+                      <div className="bg-gradient-to-r from-green-500 to-cyan-500 text-white text-center py-4 flex items-center justify-center">
+                        <img src={segmentation} alt="Clustering Logo" className="w-20 h-20 object-contain mr-4" />
+                        <h3 className="text-lg font-semibold">Customer Segmentation</h3>
                       </div>
-                      {/* Bottom 85% – Details */}
                       <div className="bg-white dark:bg-gray-800 p-4 space-y-2 h-[85%]">
-                        <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                          Stay tuned for more exciting projects and innovations!
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+
+                          A machine learning project using <strong>KMeans</strong> and <strong>Hierarchical Clustering</strong> to segment customers based on behavioral patterns.
                         </p>
+                        <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                          <li>📁 Dataset: Mall Customer Data</li>
+                          <li>📈 Elbow Method & Silhouette Score</li>
+                          <li>🧪 Scaling with StandardScaler</li>
+                          <li>🎯 Targeted marketing insights</li>
+                          <li>📊 Interactive visualizations with Seaborn & Plotly</li>
+                        </ul>
+                        <a
+                          href="https://github.com/chandana-musunuru/MachineLearning.git"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700"
+                        >
+                          View on GitHub
+                        </a>
                       </div>
                     </div>
+                    {/* Project 4 */}
+                    <div className="rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 overflow-hidden border border-gray-300 dark:border-gray-700">
+                      {/* Top 15% – Title */}
+                      <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white text-center py-4 flex items-center justify-center">
+                        <img src={lib} alt="Clustering Logo" className="w-20 h-20 object-contain mr-4" />
+                        <h3 className="text-lg font-semibold">Library Database System</h3>
+                      </div>
+
+                      {/* Bottom 85% – Details */}
+                      <div className="bg-white dark:bg-gray-800 p-4 space-y-2 h-[85%]">
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                          A complete library database system with GUI, developed using Python and JavaScript with MySQL integration.
+                        </p>
+                        <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                          <li>📚 Tables: Publishers, Subjects, Authors, Titles, Customers</li>
+                          <li>🔄 CRUD operations using SQL + Python</li>
+                          <li>🖥️ GUI built with Tkinter and JavaScript interactions</li>
+                          <li>💾 Data integrity ensured with proper relationships</li>
+                          <li>🌐 Connected seamlessly to MySQL backend</li>
+                        </ul>
+                        <a
+                          href="https://github.com/chandana-musunuru/Project_database.git"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700"
+                        >
+                          View on GitHub
+                        </a>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </section>
+
             );
           }
+          
+
+          
 
 
-          return (
-            <section
-              key={section}
-              id={section.toLowerCase()}
-              className="min-h-[80vh] flex items-center justify-center bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
-            >
-              <h2 className="text-3xl">{section} Section</h2>
-            </section>
-          );
-        })}
+
+
+            return (
+              <section
+                key={section}
+                id={section.toLowerCase()}
+                className="min-h-[80vh] flex items-center justify-center bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
+              >
+                <h2 className="text-3xl">{section} Section</h2>
+              </section>
+            );
+          })}
       </div>
     </div>
   );
