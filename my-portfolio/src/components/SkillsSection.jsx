@@ -55,7 +55,7 @@ const skillsData = {
 
 const SkillsSection = () => {
     return (
-      <div className="min-h-[80vh] flex flex-col px-20 py-10 bg-gray-70 dark:bg-gray-600">
+      <div id="skills" className="h-[80vh] flex flex-col px-20 py-10 bg-gray-200 dark:bg-gray-600">
         {/* Top 10% for heading */}
         <div className="h-[10vh] flex items-start justify-start pl-[4%] ">
           <h2 className="text-4xl font-bold text-blue-600 dark:text-white">Skills</h2>
@@ -68,7 +68,7 @@ const SkillsSection = () => {
               skillsData[category].map((skill) => (
                 <div
                   key={skill.name}
-                  className="bg-blue-100 rounded-md p-2 w-20 h-20 flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-sm text-[10px] text-center"
+                  className="bg-blue-200 rounded-md p-2 w-20 h-20 flex items-center justify-center hover:scale-105 transition-transform duration-200 shadow-sm text-[10px] text-center"
                   title={skill.name}
                 >
                   <img

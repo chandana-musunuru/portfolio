@@ -17,7 +17,7 @@ function App() {
   }, [isDark]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <div className="flex flex-col min-h-screen bg-white text-black dark:bg-brown-900 dark:text-white transition-colors duration-300">
       <Header isDark={isDark} setIsDark={setIsDark} />
       <main className="flex-grow">
         <About />

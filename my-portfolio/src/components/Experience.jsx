@@ -48,7 +48,7 @@ const Experience = () => {
   }, [isInView, controls]);
 
   return (
-    <section id="experience" className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white px-6 py-16">
+    <section id="experience" className="min-h-screen bg-gray-120 dark:bg-gray-900 text-gray-800  px-6 py-16">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-blue-600 dark:text-white">Software Journey</h2>
         <h4 className="text-lg font-m mb-10 text-black-600 dark:text-yellow-300 italic">

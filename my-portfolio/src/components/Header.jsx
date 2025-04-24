@@ -29,8 +29,9 @@ const Header = ({ isDark, setIsDark }) => {
       </div>
       <div className="flex justify-center pb-4">
         <a
-          href="/resume.pdf"
+          href={`${import.meta.env.BASE_URL}Resume.pdf`}
           download
+          type="application/pdf"
           className="bg-white text-blue-600 px-5 sm:px-6 py-2 rounded-full font-bold hover:bg-green-500 hover:text-white transition text-sm sm:text-base"
         >
           Download Resume
